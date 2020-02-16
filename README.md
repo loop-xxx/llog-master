@@ -132,7 +132,7 @@ func multiGoroutineLogerExample() {
 ###### 高并发时注意:
 
 ```go
-//当写入日志并发量过高时, 除error级别外的日志, 都不会阻塞,等待写入,会直接被丢弃
+//当写入日志并发量过高时, 除error级别外的日志, 都不会阻塞等待写入,会直接被丢弃
 
 select {
     case lp.lipchan <- &loginfo{
