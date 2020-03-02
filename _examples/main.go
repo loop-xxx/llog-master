@@ -33,7 +33,7 @@ func consolelogerExample() {
 }
 
 func handlersub(ll llog.Loger) {
-	for i := uint(0); i < 0xfffff; i++ {
+	for i := uint(0); i < 0xffff; i++ {
 		ll.Debugfl("%#v", "hello, world")
 		ll.Debugln("hello, world")
 		ll.Infofl("%#v", "hello, world")
