@@ -40,7 +40,7 @@ func Build(plevel Level, logdir string, logname string, capacity uint,
 ###### 日志前缀格式以及生成日志文件名命名格式修改:
 
 ```go
-//loop/llog/lutils/lutils.go
+//loop/llog/lloger/lutils/lutils.go
 /**
 日志前缀生成函数
 修改日志前缀格式, 修改此函数即可
@@ -54,7 +54,7 @@ func GenerateLogPrefix(level string, nowtime time.Time) (logprefix string)
 
 
 ```go
-//loop/llog/lutils/lutils.go
+//loop/llog/lloger/lutils/lutils.go
 /**
 日志文件名生成函数
 修改命名方式, 修改此函数即可
