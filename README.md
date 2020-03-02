@@ -1,6 +1,7 @@
 #### llog
 
 * `llog`是一款轻量级的日志库, 支持并发,异步的记录日志。
+* go get github.com/loop-xxx/llog-master
 
 ###### 简单实用:
 
