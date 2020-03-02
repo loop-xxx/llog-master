@@ -1,4 +1,4 @@
-package lloger
+package llog
 
 //Level print_level
 type Level = uint

@@ -1,4 +1,4 @@
-package lloger
+package llog
 
 import (
 	"errors"
@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/llog-master/lloger/lprinter"
-	"github.com/llog-master/lloger/lutils"
+	"github.com/loop-xxx/llog-master/lprinter"
+	"github.com/loop-xxx/llog-master/lutils"
 )
 
 const minSize = int64(0x1000)

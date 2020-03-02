@@ -1,12 +1,12 @@
-package lloger
+package llog
 
 import (
 	"fmt"
 	"os"
 	"time"
 
-	"github.com/llog-master/lloger/lprinter"
-	"github.com/llog-master/lloger/lutils"
+	"github.com/loop-xxx/llog-master/lprinter"
+	"github.com/loop-xxx/llog-master/lutils"
 )
 
 // ConsoleLoger ...

@@ -5,13 +5,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/llog-master/llog/lloger"
+	"github.com/loop-xxx/llog-master"
 )
 
 func logerExample() {
-	if ll, err := lloger.Build(lloger.DEBUG, "./varlog", "loop",
+	if ll, err := llog.Build(llog.DEBUG, "./varlog", "loop",
 		0x80000, 10*(1<<20), 2*time.Second); err == nil {
-		defer lloger.Close(ll)
+		defer llog.Close(ll)
 
 		for i := uint(0); i < 0xffffff; i++ {
 			ll.Debugfl("%#v", "hello, world")
@@ -24,7 +24,7 @@ func logerExample() {
 }
 
 func consolelogerExample() {
-	ll := lloger.BuildConsoleLoger(lloger.DEBUG)
+	ll := llog.BuildConsoleLoger(llog.DEBUG)
 	for i := uint(0); i < 0xffff; i++ {
 		ll.Debugfl("%#v", "hello, world")
 		ll.Debugln("hello, world")
@@ -32,7 +32,7 @@ func consolelogerExample() {
 
 }
 
-func handlersub(ll lloger.Loger) {
+func handlersub(ll llog.Loger) {
 	for i := uint(0); i < 0xfffff; i++ {
 		ll.Debugfl("%#v", "hello, world")
 		ll.Debugln("hello, world")
@@ -46,12 +46,12 @@ func handlersub(ll lloger.Loger) {
 	}
 }
 
-func handler(wgp *sync.WaitGroup, ll lloger.Loger) {
+func handler(wgp *sync.WaitGroup, ll llog.Loger) {
 	defer wgp.Done()
 	handlersub(ll)
 }
 
-func handlerpool(ll lloger.Loger) {
+func handlerpool(ll llog.Loger) {
 	var wg sync.WaitGroup
 
 	for i := int(0); i < 0x10; i++ {
@@ -64,9 +64,9 @@ func handlerpool(ll lloger.Loger) {
 }
 
 func multiGoroutineLogerExample() {
-	if ll, err := lloger.Build(lloger.ERROR, "./varlog", "loop",
+	if ll, err := llog.Build(llog.ERROR, "./varlog", "loop",
 		0x80000, 10*(1<<20), 2*time.Second); err == nil {
-		defer lloger.Close(ll)
+		defer llog.Close(ll)
 
 		handlerpool(ll)
 	}
