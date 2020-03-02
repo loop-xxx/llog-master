@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/llog-master/llog/lloger/lprinter"
-	"github.com/llog-master/llog/lloger/lutils"
+	"github.com/llog-master/lloger/lprinter"
+	"github.com/llog-master/lloger/lutils"
 )
 
 const minSize = int64(0x1000)
