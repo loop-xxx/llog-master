@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/loop/llog-master/lloger"
+	"github.com/llog-master/llog/lloger"
 )
 
 func logerExample() {

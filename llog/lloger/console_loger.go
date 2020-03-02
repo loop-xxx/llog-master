@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/llog-master/llog/lloger/lprinter"
-	"github.com/llog-master/llog/lutils"
+	"github.com/llog-master/llog/lloger/lutils"
 )
 
 // ConsoleLoger ...
